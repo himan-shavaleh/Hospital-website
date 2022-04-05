@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&family=Markazi+Text:wght@600&family=Noto+Kufi+Arabic:wght@500&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -6,4 +7,556 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
+  color: rgba(12, 3, 27, 0.7);
+}
+
+.container {
+  max-width: 82%;
+  margin: 0 auto;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  line-height: 1.2;
+}
+
+section {
+  margin-top: 6rem;
+}
+
+section > h2 {
+  text-align: center;
+}
+
+section > p {
+  width: 45%;
+  text-align: center;
+  margin: 0.6rem auto 2.5rem;
+}
+
+.btn {
+  display: inline-block;
+  width: fit-content;
+  padding: 0.75rem 1rem;
+  border-radius: 0.4rem;
+  background: #f72585;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.btn:hover {
+  background: #f84c9b;
+  box-shadow: 0 1rem 1.6rem rgba(12, 3, 27, 0.15);
+}
+
+.btn-primary {
+  display: inline-block;
+  width: fit-content;
+  padding: 0.75rem 1rem;
+  border-radius: 0.4rem;
+  background: #480ca8;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.btn-primary:hover {
+  background: #580fce;
+  box-shadow: 0 1rem 1.6rem rgba(12, 3, 27, 0.15);
+}
+
+nav {
+  width: 100vw;
+  height: 5rem;
+  position: fixed;
+  color: rgba(12, 3, 27, 0.7);
+  z-index: 10;
+  display: grid;
+  box-shadow: 0 1rem 1rem rgba(12, 3, 27, 0.1);
+  background: linear-gradient(135deg, #480ca8, #4cc9f0);
+  color: #ffffff;
+  align-items: center;
+}
+
+nav h1, nav h2, nav h3, nav h4, nav h5 {
+  color: #ffffff;
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .container button {
+  display: none;
+}
+
+nav .container a {
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+nav .container .nav__logo {
+  font-size: 1.3rem;
+  margin-right: 3rem;
+}
+
+nav .container ul {
+  gap: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@keyframes flipnavItem {
+  from {
+    transform: rotateX(90deg);
+  }
+  to {
+    transform: rotateX(0);
+    opacity: 1;
+  }
+}
+
+#header {
+  height: 100vh;
+  display: grid;
+  background: linear-gradient(135deg, #480ca8, #4cc9f0);
+  color: #ffffff;
+  place-items: center;
+}
+
+#header h1, #header h2, #header h3, #header h4, #header h5 {
+  color: #ffffff;
+}
+
+#header .container {
+  display: grid;
+  grid-template-columns: 46% 46%;
+  gap: 8%;
+}
+
+#header .container .header__content {
+  display: grid;
+  gap: 1rem;
+}
+
+#header .container .header__content p {
+  color: #ffffff;
+}
+
+#services {
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+#services h2 {
+  display: inline-block;
+  margin-bottom: 2rem;
+  border-bottom: 3px #f72585 solid;
+  padding-bottom: 0.5rem;
+}
+
+#services .container {
+  text-align: left;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+#services .container article {
+  background: linear-gradient(135deg, #480ca8, #4cc9f0);
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+#services .container article h1, #services .container article h2, #services .container article h3, #services .container article h4, #services .container article h5 {
+  color: #ffffff;
+}
+
+#services .container article:hover {
+  transform: translateY(-1rem);
+}
+
+#services .container article i {
+  color: #ffffff;
+  font-size: 1.3rem;
+}
+
+#specialists {
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+#specialists h2 {
+  display: inline-block;
+  margin-bottom: 2rem;
+  border-bottom: 3px #f72585 solid;
+  padding-bottom: 0.5rem;
+}
+
+#specialists .container {
+  text-align: left;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+#specialists .container article {
+  padding-bottom: 1rem;
+  box-shadow: 0 0 3px #4cc9f0;
+  border-radius: 10px;
+  gap: 1rem;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+#specialists .container article::before {
+  content: "";
+  width: 300%;
+  height: 300%;
+  display: block;
+  position: absolute;
+  top: -300%;
+  left: -300%;
+  transition: all 1s ease-in-out;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #480ca8, rgba(76, 201, 240, 0.5));
+}
+
+#specialists .container article .specialists__socials {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+#specialists .container article .specialists__socials a {
+  width: 40px;
+  height: 40px;
+  background: #ffffff;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  transition: all 1s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+  align-items: center;
+  border-radius: 50%;
+}
+
+#specialists .container article .specialists__whatsapp {
+  position: absolute;
+  left: 50%;
+  bottom: 30%;
+  width: 3.5rem;
+  height: 3.5rem;
+  font-size: 2rem;
+  background: #46e075;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: all 1s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+}
+
+#specialists .container article .specialists__whatsapp i {
+  color: #ffffff;
+}
+
+#specialists .container article img {
+  border-radius: 10px;
+}
+
+#specialists .container article:hover {
+  box-shadow: none;
+}
+
+#specialists .container article:hover .specialists__socials a {
+  opacity: 1;
+  visibility: visible;
+}
+
+#specialists .container article:hover .specialists__whatsapp {
+  visibility: visible;
+  opacity: 1;
+}
+
+#specialists .container article:hover::before {
+  left: -100%;
+  top: -100%;
+}
+
+#specialists .container article h4 {
+  color: #4cc9f0;
+  text-align: center;
+  margin: 1rem;
+}
+
+#specialists .container article p {
+  text-align: center;
+}
+
+#testimonials {
+  width: 90%;
+  margin: auto;
+}
+
+#testimonials .container {
+  padding: 0 5rem 5rem 5rem;
+}
+
+#testimonials .container article {
+  background: linear-gradient(135deg, #480ca8, #4cc9f0);
+  color: #ffffff;
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  cursor: default;
+  font-size: 0.9rem;
+}
+
+#testimonials .container article h1, #testimonials .container article h2, #testimonials .container article h3, #testimonials .container article h4, #testimonials .container article h5 {
+  color: #ffffff;
+}
+
+#testimonials .container article p {
+  margin-bottom: 1.5rem;
+}
+
+#testimonials .container article .patient {
+  display: flex;
+  align-items: center;
+  gap: 1.3rem;
+}
+
+#testimonials .container article .patient .avatar {
+  width: 2.5rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+#appointment {
+  padding-bottom: 2rem;
+}
+
+#appointment .container {
+  display: grid;
+  grid-template-columns: 35% 55%;
+  gap: 10%;
+}
+
+#appointment .container .info {
+  display: grid;
+  gap: 1rem;
+}
+
+#appointment .container .info article {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+#appointment .container .info article i {
+  font-size: 2rem;
+  color: #4cc9f0;
+  margin: 0.5rem;
+}
+
+#appointment .container .info article h4 {
+  font-size: 1.4rem;
+  margin: 0.5rem;
+}
+
+#appointment .container .info article p {
+  color: #4cc9f0;
+}
+
+#appointment .container form {
+  margin: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+#appointment .container form .form__group label {
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+  display: inline-block;
+  font-weight: 600;
+}
+
+#appointment .container form .form__group input, #appointment .container form .form__group textarea, #appointment .container form .form__group select {
+  background: #ffffff;
+  padding: 0.8rem 1rem;
+  display: block;
+  width: 100%;
+  border-radius: 1rem;
+  font-size: 1.1rem;
+  appearance: none;
+  resize: none;
+}
+
+#footer {
+  background: rgba(12, 3, 27, 0.7);
+  padding: 2rem 0;
+}
+
+#footer .container {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+}
+
+#footer .container .footer__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
+#footer .container .footer__content article {
+  display: flex;
+  width: 25%;
+  flex-direction: column;
+}
+
+#footer .container .footer__content article * {
+  margin: 0.3rem 0;
+  color: #4cc9f0;
+}
+
+#footer .container .footer__content article h4 {
+  color: #ffffff;
+  margin: 0.6rem 0;
+}
+
+#footer .container .footer__copy {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+#footer .container .footer__copy p {
+  color: #ffffff;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 90%;
+  }
+  nav .container button {
+    display: block;
+    background: transparent;
+    color: #ffffff;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  nav .container button#close__nav-btn {
+    display: none;
+  }
+  nav .container ul {
+    display: none;
+    position: fixed;
+    right: 5%;
+    top: 5rem;
+    gap: 0;
+    flex-direction: column;
+    perspective: 300px;
+  }
+  nav .container ul li {
+    width: 100%;
+    animation: flipnavItem 0.7s ease 0.1s forwards;
+    opacity: 0;
+    transform-origin: top;
+  }
+  nav .container ul li:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  nav .container ul li:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  nav .container ul li:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+  nav .container ul li:nth-child(5) {
+    animation-delay: 0.5s;
+  }
+  nav .container ul li a {
+    height: 100%;
+    width: 100%;
+    display: block;
+    background: linear-gradient(#4cc9f0, #13b4e6);
+    border-radius: 0;
+    padding: 1.5rem 2rem;
+  }
+  nav .container ul li a.btn {
+    background: #f72585;
+  }
+  #services .container {
+    grid-template-columns: 1fr 1fr;
+  }
+  #specialists .container {
+    grid-template-columns: 1fr 1fr;
+  }
+  #footer .container .footer__content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  section p {
+    width: 56%;
+  }
+  #header .container {
+    padding-top: 6rem;
+    grid-template-columns: 100%;
+  }
+  #services .container {
+    grid-template-columns: 1fr;
+  }
+  #specialists .container {
+    grid-template-columns: 1fr;
+  }
+  #appointment .container {
+    grid-template-columns: 1fr;
+  }
+  #appointment .container .info {
+    text-align: center;
+  }
+  #footer .container .footer__content {
+    grid-template-columns: 1fr;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'markazi',sans-serif;
+  font-weight: 700;
+  line-height: 1.5;
+  color: rgba(12, 3, 27, 0.7);
+  background: rgba(76, 201, 240, 0.1);
+  user-select: none;
 }

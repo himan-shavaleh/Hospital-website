@@ -1,0 +1,47 @@
+
+// NAVBAR styles
+nav{
+    width: 100vw;
+    height: 5rem;
+    position: fixed;
+    color:$dark-color;
+    z-index: 10;
+    display: grid;
+    // place-items: center;
+    box-shadow: 0 1rem 1rem rgba($color: $black-color, $alpha: 0.1);
+  @include gradientBackground;
+  align-items: center;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // only should display in small screens
+        button{
+            display: none;
+        }
+        a{
+            color: $white-color;
+            font-weight: 800;
+            font-size: 0.9rem;
+        } 
+        .nav__logo{
+            font-size: 1.3rem;
+            margin-right: 3rem;
+        }
+        ul{
+            gap:3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}
+@keyframes flipnavItem {
+    from{
+        transform: rotateX(90deg);
+    }
+    to{
+        transform: rotateX(0);
+        opacity: 1;
+    }
+}

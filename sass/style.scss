@@ -1,1 +1,23 @@
 @import 'config';
+@import 'mixins';
+@import 'utilities';
+@import 'navbar';
+@import 'header';
+@import 'services';
+@import 'specialist';
+@import 'testimonials';
+@import 'appointment';
+@import 'footer';
+@import 'responsive';
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'markazi',sans-serif;
+font-weight: 700;
+line-height: 1.5;
+color:$dark-color;
+background: rgba($primary-color-varient, 0.1);
+user-select: none;
+}

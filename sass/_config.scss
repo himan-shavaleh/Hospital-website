@@ -1,3 +1,24 @@
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&family=Markazi+Text:wght@600&family=Noto+Kufi+Arabic:wght@500&display=swap');
+
+
+
+
+// variables
+$primary-color:#480ca8;
+$primary-color-varient:#4cc9f0;
+$color-succes:#46e075;
+$secondary-color:#f72585;
+$white-color:#ffffff;
+$succes-color:#54eb72;
+$light-color:rgba(#fff,0.7);
+$black-color:#0c031b;
+$dark-color:rgba($black-color,0.7);
+$container-lg:82%;
+$container-md:90%;
+
+
+// resets
 *{
     margin: 0;
     padding: 0;
@@ -6,4 +27,5 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
+    color:$dark-color;
 }

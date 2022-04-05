@@ -1,0 +1,111 @@
+#specialists {
+  padding-bottom: 2rem;
+  text-align: center;
+  h2 {
+    display: inline-block;
+    margin-bottom: 2rem;
+    border-bottom: 3px $secondary-color solid;
+    padding-bottom: 0.5rem;
+  }
+  .container {
+    text-align: left;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+
+    article {
+      padding-bottom: 1rem;
+      box-shadow: 0 0 3px $primary-color-varient;
+      border-radius: 10px;
+      gap: 1rem;
+      transition: all 0.5s ease;
+      cursor: pointer;
+      overflow: hidden;
+      position: relative;
+      &::before {
+        content: "";
+        width: 300%;
+        height: 300%;
+        display: block;
+        position: absolute;
+        top: -300%;
+        left: -300%;
+        transition: all 1s ease-in-out;
+        border-radius: 50%;
+        background: linear-gradient(
+          135deg,
+          $primary-color,
+          rgba($primary-color-varient, 0.5)
+        );
+      }
+      .specialists__socials {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        display: flex;
+        flex-direction: column;
+        a {
+          width: 40px;
+          height: 40px;
+          background: $white-color;
+          margin: 1rem 0;
+          display: flex;
+          justify-content: center;
+          transition: all 1s ease-in-out;
+          visibility: hidden;
+          opacity: 0;
+          align-items: center;
+          border-radius: 50%;
+        }
+      }
+      .specialists__whatsapp {
+        position: absolute;
+        left: 50%;
+        bottom: 30%;
+        width: 3.5rem;
+        height: 3.5rem;
+        font-size: 2rem;
+        background: $color-succes;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        transition: all 1s ease-in-out;
+        visibility: hidden;
+        opacity: 0;
+        i {
+          color: $white-color;
+        }
+      }
+      img {
+        border-radius: 10px;
+      }
+      &:hover {
+        box-shadow: none;
+        .specialists__socials {
+            a{
+          opacity: 1;
+          visibility: visible;
+            }
+        }
+        .specialists__whatsapp {
+          visibility: visible;
+          opacity: 1;
+        }
+        &::before {
+          left: -100%;
+          top: -100%;
+        }
+      }
+
+      h4 {
+        color: $primary-color-varient;
+        text-align: center;
+        margin: 1rem;
+      }
+      p {
+        text-align: center;
+      }
+    }
+  }
+}

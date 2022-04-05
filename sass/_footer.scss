@@ -1,0 +1,35 @@
+#footer{
+    background: $dark-color;
+    padding: 2rem 0;
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        .footer__content{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 2rem;
+            article{
+                display: flex;
+                width: 25%;
+                flex-direction: column;
+                *{
+                    margin: 0.3rem 0;
+                    color: $primary-color-varient;
+                }
+                h4{
+                    color: $white-color;
+                    margin: 0.6rem 0;
+
+                }
+            }
+        }
+        .footer__copy{
+            text-align: center;
+            margin: 1rem 0;
+            p{
+                color: $white-color;
+            }
+        }
+    }
+}
